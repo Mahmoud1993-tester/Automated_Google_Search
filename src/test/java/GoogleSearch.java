@@ -7,13 +7,15 @@ import java.util.Scanner;
 public class GoogleSearch {
     public static void main(String[] args) {
 
-        // Set up WebDriver and Scanner
-        WebDriver driver = new ChromeDriver();
+        // Create a Scanner for user input
         Scanner input = new Scanner(System.in);
 
         // Prompt user for search term
         System.out.println("Enter search term : ");
         String mySearch = input.nextLine();
+
+        // Set up WebDriver after getting input
+        WebDriver driver = new ChromeDriver();
 
         //Open google and perform the search
         driver.get("https://www.google.com/");
